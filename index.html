@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOODWORM SHOP — Архівний та вінтажний брендовий стрітвеар | True Religion, Robin's Jean, Affliction</title>
+    <meta name="description" content="Купити автентичний брендовий денім та архівний стрітвеар в Україні: True Religion Super T, Robin's Jean, Affliction x Haunted Mound. 100% Legit Check, швидка доставка Новою Поштою.">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Analytics 4 (Замініть G-XXXXXXXXXX на ваш ідентифікатор) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- Microsoft Clarity (Замініть CLARITY_ID на ваш Project ID) -->
+    <!--
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "CLARITY_ID");
+    </script>
+    -->
+</head>
+<body>
+    <!-- Верхня панель / Шапка -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">BLOODWORM<span>SHOP</span></a>
+            <nav class="nav">
+                <a href="#about">Концепт</a>
+                <a href="#catalog">Каталог</a>
+                <a href="#order">Замовлення</a>
+                <a href="https://t.me/bloodwormshop" target="_blank" class="nav-tg">Telegram @bloodwormshop</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Головний екран з фоном Salem та блюром -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Underground Archive & Curated Streetwear</span>
+            <h1 class="hero-title">Архівний та вінтажний брендовий одяг</h1>
+            <p class="hero-desc">Кураторська добірка культового деніму та мерчу: True Religion, Robin's Jean з кристалами та лімітовані релізи Affliction. Усі речі в єдиному екземплярі з підтвердженою автентичністю.</p>
+            <div class="hero-actions">
+                <a href="#catalog" class="btn btn-primary">Переглянути вітрину</a>
+                <a href="https://t.me/bloodwormshop" target="_blank" class="btn btn-secondary">Канал @bloodwormshop</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Переваги -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">Переваги BLOODWORM SHOP</h2>
+            <p class="section-subtitle">Прозорий підхід до селекції архівних речей: точні заміри, бездоганний стан та легіт чек.</p>
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="about-icon">01</div>
+                    <h3>100% Legit Check</h3>
+                    <p>Ретельна експертиза фурнітури, швів Super T/Rope Stitch, гравіювань ґудзиків та фірмових патчів.</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">02</div>
+                    <h3>Фактичні виміри в сантиметрах</h3>
+                    <p>Точні параметри пояса, довжини, ширини та виходу, зняті вручну для ідеальної посадки без примірки.</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">03</div>
+                    <h3>Швидкий шипінг по Україні</h3>
+                    <p>Відправка замовлення в день оформлення Новою Поштою по передоплаті або накладним платежем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог товарів з фільтрами -->
+    <section class="section catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Вітрина дропу</h2>
+            <p class="section-subtitle">Обирайте речі за брендами, ціною або переглядайте тільки позиції в наявності.</p>
+            
+            <!-- Панель фільтрів -->
+            <div class="filter-panel">
+                <div class="filter-group">
+                    <label for="brandFilter">Бренд:</label>
+                    <select id="brandFilter" class="filter-select">
+                        <option value="all">Усі бренди</option>
+                        <option value="robins">Robin's Jean</option>
+                        <option value="true">True Religion</option>
+                        <option value="affliction">Affliction</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortPrice">Ціна:</label>
+                    <select id="sortPrice" class="filter-select">
+                        <option value="default">За замовчуванням</option>
+                        <option value="asc">Від дешевих до дорогих</option>
+                        <option value="desc">Від дорогих до дешевих</option>
+                    </select>
+                </div>
+
+                <div class="filter-group filter-checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="hideSold">
+                        <span class="checkmark"></span>
+                        Приховати продане (#солд)
+                    </label>
+                </div>
+
+                <div class="filter-counter">
+                    Знайдено: <span id="itemsCount">11</span> айтемів
+                </div>
+            </div>
+
+            <!-- Сітка карток -->
+            <div class="products-grid" id="productsGrid">
+                
+                <!-- 1. Affliction Bloody Angel -->
+                <div class="product-card" data-brand="affliction" data-price="2600" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/affliction-haunted-mound-bloody-angel.jpg" alt="Футболка Affliction x Haunted Mound Bloody Angel Tee" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Affliction</span>
+                        <h3 class="product-name">Affliction x Haunted Mound "Bloody Angel"</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> L</p>
+                            <p><strong>Заміри:</strong> Довжина 72 см • Ширина 53 см</p>
+                            <p><strong>Стан:</strong> ІДЕАЛ (10/10)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2 600 ₴</span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Affliction Buckshot -->
+                <div class="product-card" data-brand="affliction" data-price="3200" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/affliction-haunted-mound-buckshot.jpg" alt="Футболка Affliction x Haunted Mound Buckshot Tee" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Affliction</span>
+                        <h3 class="product-name">Affliction x Haunted Mound "Buckshot"</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> L</p>
+                            <p><strong>Заміри:</strong> Довжина 71 см • Ширина 53 см</p>
+                            <p><strong>Стан:</strong> 10/10 (новий стан)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">3 200 ₴</span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Robins Snakeskin -->
+                <div class="product-card" data-brand="robins" data-price="25000" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/robins-jean-snakeskin-bootcut.jpg" alt="Джинси Robin's Jean Snakeskin Bootcut Silver Studded з принтом змії" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Robin's Jean</span>
+                        <h3 class="product-name">Snakeskin Bootcut Silver Studded</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 36 (більшомір)</p>
+                            <p><strong>Заміри:</strong> Пояс 49 см • Довжина 118 см • Вихід 26 см</p>
+                            <p><strong>Стан:</strong> 10/10 (новий без брелока)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">25 000 ₴ <small>/ 600+$</small></span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Robins Grey Red Studded -->
+                <div class="product-card" data-brand="robins" data-price="10000" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/robins-jean-grey-red-studded.jpg" alt="Джинси Robin's Jean Grey Red Studded Wings Crystal" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Robin's Jean</span>
+                        <h3 class="product-name">Grey Red Studded Wings Crystal</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 36</p>
+                            <p><strong>Заміри:</strong> Пояс 46 см • Довжина 110 см • Вихід 23 см</p>
+                            <p><strong>Стан:</strong> 10/10 (ідеальний)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">10 000 ₴ <small>/ 220$</small></span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. True Religion Rope Stitch -->
+                <div class="product-card" data-brand="true" data-price="7000" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/true-religion-rope-stitch-deadwood.jpg" alt="Джинси True Religion Rope Stitch DeadWood Wash ASO Sematary" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">True Religion</span>
+                        <h3 class="product-name">Rope Stitch DeadWood Wash</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 33x34 (ASO Sematary & Hackle)</p>
+                            <p><strong>Заміри:</strong> Пояс 44.5 см • Довжина 114 см • Вихід 23 см</p>
+                            <p><strong>Стан:</strong> 10/10</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">7 000 ₴ <small>/ 155$</small></span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. True Religion Red Tab Ricky Super T -->
+                <div class="product-card" data-brand="true" data-price="6000" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/true-religion-red-tab-ricky-supert.jpg" alt="Джинси True Religion Red Tab Ricky Super T Heavy White Stitch" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">True Religion</span>
+                        <h3 class="product-name">Red Tab Ricky Super T Heavy Stitch</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 32x34 • 100% Cotton</p>
+                            <p><strong>Заміри:</strong> Пояс 44 см • Довжина 115 см • Вихід 22 см</p>
+                            <p><strong>Стан:</strong> Ідеал (10/10)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">6 000 ₴ <small>/ 133$</small></span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Robins Jean COD Camo Cargo (#солд) -->
+                <div class="product-card is-sold" data-brand="robins" data-price="18500" data-status="sold">
+                    <div class="product-badge sold">#солд</div>
+                    <div class="product-image-box">
+                        <img src="images/robins-jean-cod-camo-cargo-sold.jpg" alt="Штани карго Robin's Jean Call of Duty COD's Camo Wash OG" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Robin's Jean</span>
+                        <h3 class="product-name">COD's Camo Wash Cargo Pants</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 36 (регулюється 34-38) • ASO Sematary</p>
+                            <p><strong>Заміри:</strong> Напівобхват 48 см • Довжина 114 см • Вихід 26 см</p>
+                            <p><strong>Стан:</strong> Відмінний (продано)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">18 500 ₴ <small>/ 410$</small></span>
+                            <span class="btn btn-card btn-disabled">Продано</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Robins Jean Bootcut Paint (#солд) -->
+                <div class="product-card is-sold" data-brand="robins" data-price="15800" data-status="sold">
+                    <div class="product-badge sold">#солд</div>
+                    <div class="product-image-box">
+                        <img src="images/robins-jean-bootcut-paint-sold.jpg" alt="Джинси Robin's Jean Bootcut Paint бризки фарби кристали" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Robin's Jean</span>
+                        <h3 class="product-name">Bootcut "Paint" Custom Splatter</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 34x34</p>
+                            <p><strong>Заміри:</strong> Пояс 43 см • Довжина 111 см • Вихід 24 см</p>
+                            <p><strong>Стан:</strong> NEW (продано)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">15 800 ₴ <small>/ 350$</small></span>
+                            <span class="btn btn-card btn-disabled">Продано</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Robins Jean Mudwash Cargo (#солд) -->
+                <div class="product-card is-sold" data-brand="robins" data-price="15600" data-status="sold">
+                    <div class="product-badge sold">#солд</div>
+                    <div class="product-image-box">
+                        <img src="images/robins-jean-mudwash-cargo-sold.jpg" alt="Штани карго Robin's Jean Mudwash Cargo ASO Chief Keef Sematary" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Robin's Jean</span>
+                        <h3 class="product-name">Mudwash Cargo ASO Chief Keef</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 36 • ASO Sematary & Chief Keef</p>
+                            <p><strong>Заміри:</strong> Пояс 47 см • Довжина 111 см • Вихід 23 см</p>
+                            <p><strong>Стан:</strong> 10/10 (продано)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">15 600 ₴ <small>/ 350$</small></span>
+                            <span class="btn btn-card btn-disabled">Продано</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Robin Jeans OG Wings Studded (#солд) -->
+                <div class="product-card is-sold" data-brand="robins" data-price="6500" data-status="sold">
+                    <div class="product-badge sold">#солд</div>
+                    <div class="product-image-box">
+                        <img src="images/robins-jean-og-wings-sold.jpg" alt="Джинси Robin's Jean OG з коричневою шкірою та заклепками" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Robin's Jean</span>
+                        <h3 class="product-name">Robin Jeans OG Leather Studded</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 32</p>
+                            <p><strong>Заміри:</strong> Пояс 42 см • Довжина 109 см • Вихід 22 см</p>
+                            <p><strong>Стан:</strong> 8/10 (продано)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">6 500 ₴</span>
+                            <span class="btn btn-card btn-disabled">Продано</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. True Religion VAMP Super T (#солд) -->
+                <div class="product-card is-sold" data-brand="true" data-price="4500" data-status="sold">
+                    <div class="product-badge sold">#солд</div>
+                    <div class="product-image-box">
+                        <img src="images/true-religion-vamp-supert-sold.jpg" alt="Джинси True Religion VAMP Super T з червоним та білим швом" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">True Religion</span>
+                        <h3 class="product-name">True Religion VAMP Super T</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 38</p>
+                            <p><strong>Заміри:</strong> Пояс 50 см • Довжина 115 см • Вихід 23 см</p>
+                            <p><strong>Стан:</strong> ІДЕАЛ (продано)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">4 500 ₴ <small>/ 100$</small></span>
+                            <span class="btn btn-card btn-disabled">Продано</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Інструкція із замовлення -->
+    <section class="section order-guide" id="order">
+        <div class="container">
+            <h2 class="section-title">Як придбати річ</h2>
+            <div class="steps-row">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4>Вибір моделі</h4>
+                    <p>Звірте фактичні заміри пояса та довжини зі своїм повсякденним одягом.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4>Зв'язок у Telegram</h4>
+                    <p>Напишіть нам в особисті повідомлення <a href="https://t.me/bloodwormx" target="_blank">@bloodwormx</a> для підтвердження броні.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4>Шипінг</h4>
+                    <p>Отримайте номер накладної та заберіть замовлення у відділенні Нової Пошти.</p>
+                </div>
+            </div>
+            
+            <div class="cta-banner">
+                <h3>Слідкуйте за свіжими поставками в каналі</h3>
+                <p>Ексклюзивні дропи, знижки на архівні пари та нові надходження щотижня.</p>
+                <a href="https://t.me/bloodwormshop" target="_blank" class="btn btn-primary">Підписатися на @bloodwormshop</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер сайту з обов'язковими вимогами викладача -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>BLOODWORM SHOP</h3>
+                    <p>Кураторський архівний вінтаж, важкий преміальний денім та стрітвеар в Україні.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Зовнішні ресурси</h4>
+                    <ul>
+                        <li><a href="https://t.me/bloodwormshop" target="_blank">Telegram-канал @bloodwormshop</a></li>
+                        <li><a href="https://oneu.edu.ua/" target="_blank">Одеський національний економічний університет</a></li>
+                        <li><a href="https://github.com" target="_blank">Розробка веб-ресурсів GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <h4>Контакт менеджера</h4>
+                    <p>Telegram: <a href="https://t.me/bloodwormx" target="_blank">@bloodwormx</a></p>
+                    <p>Локація: Одеса, Україна</p>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+
+            <!-- ОБОВ'ЯЗКОВИЙ ДИСКЛЕЙМЕР ВИКЛАДАЧА -->
+            <div class="footer-disclaimer">
+                <p>&copy; 2026 Увага! Цей веб-сайт є навчальним проєктом, створеним виключно з освітньою метою в межах навчального курсу. Сайт не здійснює комерційної діяльності, не надає платних послуг і не призначений для отримання прибутку.</p>
+                <p class="author-signature">Зробив сайт: <strong>Сікорський В. С.</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт інтерактивної фільтрації та сортування -->
+    <script>
+        const brandFilter = document.getElementById('brandFilter');
+        const sortPrice = document.getElementById('sortPrice');
+        const hideSold = document.getElementById('hideSold');
+        const productsGrid = document.getElementById('productsGrid');
+        const itemsCount = document.getElementById('itemsCount');
+
+        function filterAndSortProducts() {
+            const cards = Array.from(productsGrid.querySelectorAll('.product-card'));
+            const selectedBrand = brandFilter.value;
+            const selectedSort = sortPrice.value;
+            const isHideSold = hideSold.checked;
+
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardBrand = card.getAttribute('data-brand');
+                const cardStatus = card.getAttribute('data-status');
+
+                let matchBrand = (selectedBrand === 'all' || cardBrand === selectedBrand);
+                let matchSold = !(isHideSold && cardStatus === 'sold');
+
+                if (matchBrand && matchSold) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Сортування
+            if (selectedSort !== 'default') {
+                const visibleCards = cards.filter(card => card.style.display !== 'none');
+                visibleCards.sort((a, b) => {
+                    const priceA = parseInt(a.getAttribute('data-price'), 10);
+                    const priceB = parseInt(b.getAttribute('data-price'), 10);
+                    return selectedSort === 'asc' ? priceA - priceB : priceB - priceA;
+                });
+                visibleCards.forEach(card => productsGrid.appendChild(card));
+            }
+
+            itemsCount.textContent = visibleCount;
+        }
+
+        brandFilter.addEventListener('change', filterAndSortProducts);
+        sortPrice.addEventListener('change', filterAndSortProducts);
+        hideSold.addEventListener('change', filterAndSortProducts);
+    </script>
+</body>
+</html>

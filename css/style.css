@@ -1,0 +1,562 @@
+/* Стилі BLOODWORM SHOP */
+:root {
+    --bg-dark: #0a0a0c;
+    --bg-card: #141417;
+    --accent-red: #e63946;
+    --accent-red-hover: #ff4d5a;
+    --text-main: #f4f4f7;
+    --text-muted: #9696a0;
+    --border-color: #242428;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: rgba(10, 10, 12, 0.92);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.logo span {
+    color: var(--accent-red);
+}
+.nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.nav a:hover {
+    color: #ffffff;
+}
+.nav a.nav-tg {
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+.nav a.nav-tg:hover {
+    background-color: var(--accent-red);
+    color: #ffffff;
+}
+
+/* Кнопки — Вимоги методички CSS (градієнт, скруглення, hover-ефект) */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px; /* Властивість 1: border-radius */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Властивість 2: transition */
+    cursor: pointer;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #e63946 0%, #b51726 100%); /* Властивість 3: linear-gradient */
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+    border: none;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(230, 57, 70, 0.55);
+    background: linear-gradient(135deg, #ff4d5a 0%, #d62839 100%);
+}
+.btn-secondary {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: 12px;
+    backdrop-filter: blur(8px);
+}
+.btn-secondary:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+.btn-card {
+    background: var(--accent-red);
+    color: #ffffff;
+    padding: 9px 18px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+.btn-card:hover {
+    background: var(--accent-red-hover);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+}
+.btn-disabled {
+    background: #2a2a2e;
+    color: #777780;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Hero Section with Salem Background & Blur */
+.hero {
+    position: relative;
+    padding: 140px 0 110px;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/hero-salem-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.42);
+    transform: scale(1.08); /* запобігає білим краям від блюру */
+    z-index: 1;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(230, 57, 70, 0.18) 0%, rgba(10, 10, 12, 0.88) 80%);
+    z-index: 2;
+}
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(230, 57, 70, 0.25);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(230, 57, 70, 0.5);
+    backdrop-filter: blur(5px);
+}
+.hero-title {
+    font-size: 46px;
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+.hero-desc {
+    font-size: 18px;
+    color: #d1d1d8;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sections */
+.section {
+    padding: 85px 0;
+}
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 auto 40px;
+    font-size: 15px;
+}
+
+/* Панель фільтрів (Filter Panel) */
+.filter-panel {
+    background: #141418;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.filter-group label {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+.filter-select {
+    background: #1c1c22;
+    border: 1px solid #33333d;
+    color: #ffffff;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.filter-select:hover, .filter-select:focus {
+    border-color: var(--accent-red);
+}
+
+/* Кастомний чекбокс */
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13.5px;
+    color: #e0e0e6;
+    user-select: none;
+}
+.checkbox-container input {
+    margin-right: 8px;
+    width: 17px;
+    height: 17px;
+    accent-color: var(--accent-red);
+    cursor: pointer;
+}
+
+.filter-counter {
+    margin-left: auto;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+.filter-counter span {
+    color: var(--accent-red);
+    font-weight: 800;
+}
+
+/* About Grid */
+.about-grid {
+    display: flex;
+    gap: 25px;
+}
+.about-item {
+    flex: 1;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+.about-icon {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--accent-red);
+    margin-bottom: 15px;
+}
+.about-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.about-item p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Каталог товарів (адаптивна сітка 4 колонки) */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 26px;
+}
+.product-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(230, 57, 70, 0.45);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+.product-card.is-sold {
+    opacity: 0.82;
+}
+.product-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    text-transform: uppercase;
+}
+.product-badge.instock {
+    background: #10b981;
+}
+.product-badge.sold {
+    background: #e63946;
+}
+.product-image-box {
+    width: 100%;
+    height: 400px;
+    background: #101012;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+.product-info {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.product-brand {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--accent-red);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+.product-name {
+    font-size: 16.5px;
+    margin-bottom: 12px;
+    line-height: 1.35;
+    min-height: 44px;
+}
+.product-specs {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+    flex: 1;
+    line-height: 1.5;
+}
+.product-specs p {
+    margin-bottom: 4px;
+}
+.product-specs strong {
+    color: #dedee3;
+}
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+.product-price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+}
+.product-price small {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    font-weight: normal;
+}
+
+/* Steps */
+.steps-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+.step {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+.step-num {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background: var(--bg-card);
+    border: 2px solid var(--accent-red);
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    font-weight: 800;
+}
+.step h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+.step p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.step a {
+    color: var(--accent-red);
+    text-decoration: none;
+}
+
+.cta-banner {
+    background: linear-gradient(135deg, #141417 0%, #1c1c20 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 50px 30px;
+    text-align: center;
+}
+.cta-banner h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.cta-banner p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Footer */
+.footer {
+    background: #060608;
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 30px;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-brand {
+    flex: 1.5;
+}
+.footer-brand h3 {
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 14px;
+    max-width: 320px;
+}
+.footer-links, .footer-contacts {
+    flex: 1;
+}
+.footer-links h4, .footer-contacts h4 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 8px;
+}
+.footer-links a, .footer-contacts a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: color 0.2s;
+}
+.footer-links a:hover, .footer-contacts a:hover {
+    color: var(--accent-red);
+}
+.footer-contacts p {
+    color: var(--text-muted);
+    font-size: 13.5px;
+    margin-bottom: 6px;
+}
+
+.footer-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin-bottom: 25px;
+}
+
+.footer-disclaimer {
+    text-align: center;
+    font-size: 12.5px;
+    color: #888890;
+    line-height: 1.6;
+}
+.author-signature {
+    margin-top: 8px;
+    color: #b0b0bb;
+    font-size: 13.5px;
+}
+.author-signature strong {
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    .nav a { margin: 0 10px; }
+    .hero-title { font-size: 32px; }
+    .about-grid, .steps-row, .footer-top { flex-direction: column; }
+    .filter-panel { flex-direction: column; align-items: stretch; gap: 15px; }
+    .filter-counter { margin-left: 0; text-align: center; }
+    .btn-secondary { margin-left: 0; margin-top: 10px; }
+    .hero-actions { flex-direction: column; }
+}
