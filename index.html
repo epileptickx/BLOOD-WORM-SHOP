@@ -3,30 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOODWORM SHOP — Архівний та вінтажний брендовий стрітвеар | True Religion, Robin's Jean, Affliction</title>
-    <meta name="description" content="Купити автентичний брендовий денім та архівний стрітвеар в Україні: True Religion Super T, Robin's Jean, Affliction x Haunted Mound. 100% Legit Check, швидка доставка Новою Поштою.">
+    <title>BLOODWORM SHOP — Архівний та вінтажний брендовий стрітвеар | True Religion, Robin's Jean, Affliction, New Rock</title>
+    <meta name="description" content="Купити автентичний брендовий денім, взуття New Rock та архівний стрітвеар в Україні: True Religion Super T, Robin's Jean, Affliction x Haunted Mound. 100% Legit Check, швидка доставка Новою Поштою.">
     <link rel="stylesheet" href="css/style.css">
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4HRH47HZM"></script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'G-Y4HRH47HZM');
+      gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- Microsoft Clarity -->
+    <!--
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "z5g0oa1e7d");
+        })(window, document, "clarity", "script", "CLARITY_ID");
     </script>
     -->
 </head>
 <body>
-    <!-- Верхня панель / Шапка -->
+    <!-- Шапка -->
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">BLOODWORM<span>SHOP</span></a>
@@ -39,14 +41,14 @@
         </div>
     </header>
 
-    <!-- Головний екран з фоном Salem та блюром -->
+    <!-- Hero (Салем фон) -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <span class="hero-badge">Underground Archive & Curated Streetwear</span>
-            <h1 class="hero-title">Архівний та вінтажний брендовий одяг</h1>
-            <p class="hero-desc">Кураторська добірка культового деніму та мерчу: True Religion, Robin's Jean з кристалами та лімітовані релізи Affliction. Усі речі в єдиному екземплярі з підтвердженою автентичністю.</p>
+            <h1 class="hero-title">Архівний та вінтажний брендовий одяг і взуття</h1>
+            <p class="hero-desc">Кураторська добірка культового деніму, черевиків New Rock та мерчу: True Religion, Robin's Jean з кристалами та лімітовані релізи Affliction. Усі речі в єдиному екземплярі з підтвердженою автентичністю.</p>
             <div class="hero-actions">
                 <a href="#catalog" class="btn btn-primary">Переглянути вітрину</a>
                 <a href="https://t.me/bloodwormshop" target="_blank" class="btn btn-secondary">Канал @bloodwormshop</a>
@@ -79,14 +81,27 @@
         </div>
     </section>
 
-    <!-- Каталог товарів з фільтрами -->
+    <!-- Каталог товарів з оновленою фільтрацією за кластерами -->
     <section class="section catalog" id="catalog">
         <div class="container">
             <h2 class="section-title">Вітрина дропу</h2>
-            <p class="section-subtitle">Обирайте речі за брендами, ціною або переглядайте тільки позиції в наявності.</p>
+            <p class="section-subtitle">Обирайте речі за категоріями, брендами, розмірами та ціною на основі семантики попиту.</p>
             
-            <!-- Панель фільтрів -->
+            <!-- Панель мультифільтрації -->
             <div class="filter-panel">
+                <!-- Категорія -->
+                <div class="filter-group">
+                    <label for="categoryFilter">Категорія:</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">Усі категорії</option>
+                        <option value="jeans">Джинси / Карго</option>
+                        <option value="tops">Футболки / Мерч</option>
+                        <option value="shoes">Взуття (New Rock)</option>
+                        <option value="suits">Светри / Костюми</option>
+                    </select>
+                </div>
+
+                <!-- Бренд -->
                 <div class="filter-group">
                     <label for="brandFilter">Бренд:</label>
                     <select id="brandFilter" class="filter-select">
@@ -94,9 +109,32 @@
                         <option value="robins">Robin's Jean</option>
                         <option value="true">True Religion</option>
                         <option value="affliction">Affliction</option>
+                        <option value="newrock">New Rock</option>
                     </select>
                 </div>
 
+                <!-- Розмір -->
+                <div class="filter-group">
+                    <label for="sizeFilter">Розмір:</label>
+                    <select id="sizeFilter" class="filter-select">
+                        <option value="all">Усі розміри</option>
+                        <optgroup label="Одяг (Пояс / Плечі)">
+                            <option value="L">L</option>
+                            <option value="32">32 (W32)</option>
+                            <option value="33">33 (W33)</option>
+                            <option value="34">34 (W34)</option>
+                            <option value="36">36 (W36)</option>
+                            <option value="38">38 (W38)</option>
+                        </optgroup>
+                        <optgroup label="Взуття (New Rock)">
+                            <option value="39">39 EU</option>
+                            <option value="42">42 EU</option>
+                            <option value="43">43 EU</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- Сортування за ціною -->
                 <div class="filter-group">
                     <label for="sortPrice">Ціна:</label>
                     <select id="sortPrice" class="filter-select">
@@ -106,6 +144,7 @@
                     </select>
                 </div>
 
+                <!-- Чекбокс приховати продане -->
                 <div class="filter-group filter-checkbox-group">
                     <label class="checkbox-container">
                         <input type="checkbox" id="hideSold">
@@ -114,8 +153,9 @@
                     </label>
                 </div>
 
+                <!-- Лічильник знайденого -->
                 <div class="filter-counter">
-                    Знайдено: <span id="itemsCount">11</span> айтемів
+                    Знайдено: <span id="itemsCount">13</span> айтемів
                 </div>
             </div>
 
@@ -123,7 +163,7 @@
             <div class="products-grid" id="productsGrid">
                 
                 <!-- 1. Affliction Bloody Angel -->
-                <div class="product-card" data-brand="affliction" data-price="2600" data-status="instock">
+                <div class="product-card" data-category="tops" data-brand="affliction" data-size="L" data-price="2600" data-status="instock">
                     <div class="product-badge instock">#вналичии</div>
                     <div class="product-image-box">
                         <img src="images/affliction-haunted-mound-bloody-angel.jpg" alt="Футболка Affliction x Haunted Mound Bloody Angel Tee" class="product-img">
@@ -144,7 +184,7 @@
                 </div>
 
                 <!-- 2. Affliction Buckshot -->
-                <div class="product-card" data-brand="affliction" data-price="3200" data-status="instock">
+                <div class="product-card" data-category="tops" data-brand="affliction" data-size="L" data-price="3200" data-status="instock">
                     <div class="product-badge instock">#вналичии</div>
                     <div class="product-image-box">
                         <img src="images/affliction-haunted-mound-buckshot.jpg" alt="Футболка Affliction x Haunted Mound Buckshot Tee" class="product-img">
@@ -165,7 +205,7 @@
                 </div>
 
                 <!-- 3. Robins Snakeskin -->
-                <div class="product-card" data-brand="robins" data-price="25000" data-status="instock">
+                <div class="product-card" data-category="jeans" data-brand="robins" data-size="36" data-price="25000" data-status="instock">
                     <div class="product-badge instock">#вналичии</div>
                     <div class="product-image-box">
                         <img src="images/robins-jean-snakeskin-bootcut.jpg" alt="Джинси Robin's Jean Snakeskin Bootcut Silver Studded з принтом змії" class="product-img">
@@ -186,7 +226,7 @@
                 </div>
 
                 <!-- 4. Robins Grey Red Studded -->
-                <div class="product-card" data-brand="robins" data-price="10000" data-status="instock">
+                <div class="product-card" data-category="jeans" data-brand="robins" data-size="36" data-price="10000" data-status="instock">
                     <div class="product-badge instock">#вналичии</div>
                     <div class="product-image-box">
                         <img src="images/robins-jean-grey-red-studded.jpg" alt="Джинси Robin's Jean Grey Red Studded Wings Crystal" class="product-img">
@@ -207,7 +247,7 @@
                 </div>
 
                 <!-- 5. True Religion Rope Stitch -->
-                <div class="product-card" data-brand="true" data-price="7000" data-status="instock">
+                <div class="product-card" data-category="jeans" data-brand="true" data-size="33" data-price="7000" data-status="instock">
                     <div class="product-badge instock">#вналичии</div>
                     <div class="product-image-box">
                         <img src="images/true-religion-rope-stitch-deadwood.jpg" alt="Джинси True Religion Rope Stitch DeadWood Wash ASO Sematary" class="product-img">
@@ -228,7 +268,7 @@
                 </div>
 
                 <!-- 6. True Religion Red Tab Ricky Super T -->
-                <div class="product-card" data-brand="true" data-price="6000" data-status="instock">
+                <div class="product-card" data-category="jeans" data-brand="true" data-size="32" data-price="6000" data-status="instock">
                     <div class="product-badge instock">#вналичии</div>
                     <div class="product-image-box">
                         <img src="images/true-religion-red-tab-ricky-supert.jpg" alt="Джинси True Religion Red Tab Ricky Super T Heavy White Stitch" class="product-img">
@@ -248,8 +288,50 @@
                     </div>
                 </div>
 
-                <!-- 7. Robins Jean COD Camo Cargo (#солд) -->
-                <div class="product-card is-sold" data-brand="robins" data-price="18500" data-status="sold">
+                <!-- 7. NEW ROCK Boots (Згідно семантики) -->
+                <div class="product-card" data-category="shoes" data-brand="newrock" data-size="42" data-price="12500" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/new-rock-tank-boots.jpg" alt="Черевики New Rock Metallic Platform Unisex" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">New Rock</span>
+                        <h3 class="product-name">New Rock M.TANK083-C1 Metallic</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> 42 EU (Unisex)</p>
+                            <p><strong>Матеріал:</strong> Натуральна шкіра, металева фурнітура</p>
+                            <p><strong>Стан:</strong> 10/10 (Нові у фірмовому боксі)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">12 500 ₴</span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Вінтажний фактурний светр (Згідно семантики) -->
+                <div class="product-card" data-category="suits" data-brand="true" data-size="L" data-price="3800" data-status="instock">
+                    <div class="product-badge instock">#вналичии</div>
+                    <div class="product-image-box">
+                        <img src="images/vintage-heavy-knit-sweater.jpg" alt="Вінтажний фактурний светр Heavy Knit" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">True Religion</span>
+                        <h3 class="product-name">Vintage Heavy Knit Zip Sweater</h3>
+                        <div class="product-specs">
+                            <p><strong>Розмір:</strong> L (вільний крій)</p>
+                            <p><strong>Заміри:</strong> Довжина 69 см • Груди 56 см</p>
+                            <p><strong>Стан:</strong> 9/10 (архівний вінтаж)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">3 800 ₴</span>
+                            <a href="https://t.me/bloodwormx" target="_blank" class="btn btn-card">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Robins Jean COD Camo Cargo (#солд) -->
+                <div class="product-card is-sold" data-category="jeans" data-brand="robins" data-size="36" data-price="18500" data-status="sold">
                     <div class="product-badge sold">#солд</div>
                     <div class="product-image-box">
                         <img src="images/robins-jean-cod-camo-cargo-sold.jpg" alt="Штани карго Robin's Jean Call of Duty COD's Camo Wash OG" class="product-img">
@@ -269,8 +351,8 @@
                     </div>
                 </div>
 
-                <!-- 8. Robins Jean Bootcut Paint (#солд) -->
-                <div class="product-card is-sold" data-brand="robins" data-price="15800" data-status="sold">
+                <!-- 10. Robins Jean Bootcut Paint (#солд) -->
+                <div class="product-card is-sold" data-category="jeans" data-brand="robins" data-size="34" data-price="15800" data-status="sold">
                     <div class="product-badge sold">#солд</div>
                     <div class="product-image-box">
                         <img src="images/robins-jean-bootcut-paint-sold.jpg" alt="Джинси Robin's Jean Bootcut Paint бризки фарби кристали" class="product-img">
@@ -290,8 +372,8 @@
                     </div>
                 </div>
 
-                <!-- 9. Robins Jean Mudwash Cargo (#солд) -->
-                <div class="product-card is-sold" data-brand="robins" data-price="15600" data-status="sold">
+                <!-- 11. Robins Jean Mudwash Cargo (#солд) -->
+                <div class="product-card is-sold" data-category="jeans" data-brand="robins" data-size="36" data-price="15600" data-status="sold">
                     <div class="product-badge sold">#солд</div>
                     <div class="product-image-box">
                         <img src="images/robins-jean-mudwash-cargo-sold.jpg" alt="Штани карго Robin's Jean Mudwash Cargo ASO Chief Keef Sematary" class="product-img">
@@ -311,8 +393,8 @@
                     </div>
                 </div>
 
-                <!-- 10. Robin Jeans OG Wings Studded (#солд) -->
-                <div class="product-card is-sold" data-brand="robins" data-price="6500" data-status="sold">
+                <!-- 12. Robin Jeans OG Wings Studded (#солд) -->
+                <div class="product-card is-sold" data-category="jeans" data-brand="robins" data-size="32" data-price="6500" data-status="sold">
                     <div class="product-badge sold">#солд</div>
                     <div class="product-image-box">
                         <img src="images/robins-jean-og-wings-sold.jpg" alt="Джинси Robin's Jean OG з коричневою шкірою та заклепками" class="product-img">
@@ -332,8 +414,8 @@
                     </div>
                 </div>
 
-                <!-- 11. True Religion VAMP Super T (#солд) -->
-                <div class="product-card is-sold" data-brand="true" data-price="4500" data-status="sold">
+                <!-- 13. True Religion VAMP Super T (#солд) -->
+                <div class="product-card is-sold" data-category="jeans" data-brand="true" data-size="38" data-price="4500" data-status="sold">
                     <div class="product-badge sold">#солд</div>
                     <div class="product-image-box">
                         <img src="images/true-religion-vamp-supert-sold.jpg" alt="Джинси True Religion VAMP Super T з червоним та білим швом" class="product-img">
@@ -387,7 +469,7 @@
         </div>
     </section>
 
-    <!-- Футер сайту з обов'язковими вимогами викладача -->
+    <!-- Футер сайту -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
@@ -412,7 +494,6 @@
             
             <div class="footer-divider"></div>
 
-            <!-- ОБОВ'ЯЗКОВИЙ ДИСКЛЕЙМЕР ВИКЛАДАЧА -->
             <div class="footer-disclaimer">
                 <p>&copy; 2026 Увага! Цей веб-сайт є навчальним проєктом, створеним виключно з освітньою метою в межах навчального курсу. Сайт не здійснює комерційної діяльності, не надає платних послуг і не призначений для отримання прибутку.</p>
                 <p class="author-signature">Зробив сайт: <strong>Сікорський В. С.</strong></p>
@@ -420,9 +501,11 @@
         </div>
     </footer>
 
-    <!-- Скрипт інтерактивної фільтрації та сортування -->
+    <!-- Скрипт повної синхронізованої мультифільтрації -->
     <script>
+        const categoryFilter = document.getElementById('categoryFilter');
         const brandFilter = document.getElementById('brandFilter');
+        const sizeFilter = document.getElementById('sizeFilter');
         const sortPrice = document.getElementById('sortPrice');
         const hideSold = document.getElementById('hideSold');
         const productsGrid = document.getElementById('productsGrid');
@@ -430,20 +513,26 @@
 
         function filterAndSortProducts() {
             const cards = Array.from(productsGrid.querySelectorAll('.product-card'));
+            const selectedCategory = categoryFilter.value;
             const selectedBrand = brandFilter.value;
+            const selectedSize = sizeFilter.value;
             const selectedSort = sortPrice.value;
             const isHideSold = hideSold.checked;
 
             let visibleCount = 0;
 
             cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
                 const cardBrand = card.getAttribute('data-brand');
+                const cardSize = card.getAttribute('data-size');
                 const cardStatus = card.getAttribute('data-status');
 
+                let matchCategory = (selectedCategory === 'all' || cardCategory === selectedCategory);
                 let matchBrand = (selectedBrand === 'all' || cardBrand === selectedBrand);
+                let matchSize = (selectedSize === 'all' || cardSize === selectedSize);
                 let matchSold = !(isHideSold && cardStatus === 'sold');
 
-                if (matchBrand && matchSold) {
+                if (matchCategory && matchBrand && matchSize && matchSold) {
                     card.style.display = 'flex';
                     visibleCount++;
                 } else {
@@ -451,7 +540,7 @@
                 }
             });
 
-            // Сортування
+            // Сортування за ціною
             if (selectedSort !== 'default') {
                 const visibleCards = cards.filter(card => card.style.display !== 'none');
                 visibleCards.sort((a, b) => {
@@ -465,7 +554,9 @@
             itemsCount.textContent = visibleCount;
         }
 
+        categoryFilter.addEventListener('change', filterAndSortProducts);
         brandFilter.addEventListener('change', filterAndSortProducts);
+        sizeFilter.addEventListener('change', filterAndSortProducts);
         sortPrice.addEventListener('change', filterAndSortProducts);
         hideSold.addEventListener('change', filterAndSortProducts);
     </script>
